@@ -1,0 +1,16 @@
+{
+	"cats": [
+		{
+			"id": "bp3",
+			"url": "https://cdn2.thecatapi.com/images/bp3.jpg",
+			"width": 500,
+			"height": 381
+		},
+		{
+			"id": "au1",
+			"url": "https://cdn2.thecatapi.com/images/au1.jpg",
+			"width": 800,
+			"height": 1124
+		}
+	]
+}
