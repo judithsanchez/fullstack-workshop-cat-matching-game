@@ -3,22 +3,23 @@ import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import './App.css';
 import {getCatData} from '../api/getCatData';
+import {fetchNewCat} from '../api/fetchNewCat';
 
 function App() {
 	const [count, setCount] = useState(0);
-	const [cats, setCats] = useState();
+	const [myCats, setMyCats] = useState();
 
 	useEffect(() => {
 		const getDataFromDatabase = async () => {
 			try {
 				const data = await getCatData();
-				setCats(data);
+				setMyCats(data);
 			} catch (error) {
 				console.error('Error fetching cat data:', error);
 			}
 		};
-
-		getDataFromDatabase();
+		// fetchNewCat(); // this gets a new cat and adds it to the database
+		getDataFromDatabase(); // get all the cats from the database
 	}, []);
 
 	return (
